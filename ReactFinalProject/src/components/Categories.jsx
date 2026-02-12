@@ -1,5 +1,5 @@
 import React from "react";
-import images from "../constents"; // Ensure this file exports the images as { cards1: '...', cards2: '...', etc. }
+import images from "../constents"; 
 
 function Categories() {
   const categories = [
