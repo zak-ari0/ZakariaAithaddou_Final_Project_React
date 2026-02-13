@@ -43,9 +43,10 @@ import shopItem6 from '../assets/images/shopy7.webp'
 import shopItem7 from '../assets/images/shopy8.webp'
 import shopItem8 from '../assets/images/shop-item-09.jpg'
 import shopItem9 from '../assets/images/shop9.webp'
+import aboutImg from '../assets/images/about_story.webp'
 
 export default {banner,banner_02,banner_07,banner_08,bg_video_1,blog_1,blog_2,
     blog_3,cards1,cards2,cards3,cards4,cards5,cards6,carousel1,carousel2,carousel3,discover,
     express,gallery_13,gallery_15,gallery_3,gallery_7,gallery_9,image,item_2,item_3,item_5,
     item_7,item_card_1,item_card_2,item_card_3,logo,mastercard,paypal,shopItem1,shopItem2,
-    shopItem3,shopItem4,shopItem5,shopItem6,shopItem7,shopItem8,visa,shopItem9}
+    shopItem3,shopItem4,shopItem5,shopItem6,shopItem7,shopItem8,visa,shopItem9,aboutImg}

@@ -12,10 +12,8 @@ function Footer() {
     <footer className="bg-[#F2F2F2] pt-20 pb-10">
       <div className="max-w-7xl mx-auto">
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
 
-          {/* Column 1 */}
           <div>
             <h3 className="font-semibold tracking-wider mb-6">
               GET IN TOUCH
@@ -36,7 +34,6 @@ function Footer() {
             </div>
           </div>
 
-          {/* Column 2 */}
           <div>
             <h3 className="font-semibold tracking-wider mb-6">
               CATEGORIES
@@ -54,7 +51,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 */}
           <div>
             <h3 className="font-semibold tracking-wider mb-6">
               LINKS
@@ -74,7 +70,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Column 4 */}
           <div>
             <h3 className="font-semibold tracking-wider mb-6">
               HELP
@@ -94,7 +89,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Column 5 */}
           <div>
             <h3 className="font-semibold tracking-wider mb-6">
               NEWSLETTER
@@ -113,7 +107,6 @@ function Footer() {
 
         </div>
 
-        {/* Bottom */}
         <div className="mt-20 text-center text-gray-600 text-sm">
           Copyright © 2022 Shopify Theme Developed by
           <span className="font-medium"> MassTechnologist </span>

@@ -30,7 +30,7 @@ export default function FasheCarousel() {
     scale: 1,
     transition: {
       duration: 0.6,
-      ease: 'ease-in-out    ',
+      ease: 'ease-in-out',
     },
   },
 };
@@ -64,7 +64,6 @@ export default function FasheCarousel() {
           <SwiperSlide key={index} className="relative w-full h-full">
             <img src={img} className="w-full h-full object-cover" />
 
-            {/* Animated Content */}
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
@@ -97,7 +96,6 @@ export default function FasheCarousel() {
         ))}
       </Swiper>
 
-      {/* PREV */}
       <div className="custom-prev absolute left-10 top-1/2 -translate-y-1/2 z-30
                       opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0
                       transition-all duration-300
@@ -108,7 +106,6 @@ export default function FasheCarousel() {
         <AiOutlineLeft className="w-4 h-4" />
       </div>
 
-      {/* NEXT */}
       <div className="custom-next absolute right-10 top-1/2 -translate-y-1/2 z-30
                       opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0
                       transition-all duration-300
