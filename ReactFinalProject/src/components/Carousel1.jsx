@@ -7,8 +7,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import images from "../constents";
+import { useNavigate } from "react-router-dom";
 
 export default function FasheCarousel() {
+      const navigate = useNavigate();
+    
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   const containerVariants = {
@@ -87,6 +91,7 @@ export default function FasheCarousel() {
 
               <motion.button
                 variants={BtnVariants}
+                 onClick={() => navigate("/shop")}
                 className="px-11 py-3 text-[17px] uppercase bg-white hover:bg-[#E65540] hover:text-white rounded-full text-black font-light transition"
               >
                 Shop Now

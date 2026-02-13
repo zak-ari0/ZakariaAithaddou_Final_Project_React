@@ -121,13 +121,13 @@ function Shop() {
               <input
                 type="text"
                 placeholder="Search..."
-                className="text-gray-500 border w-60 py-2 px-2 outline-0 "
+                className="text-gray-500 font-light border w-60 py-2 px-2 outline-0 "
               />
               <IoSearch className="absolute cursor-pointer  top-10 right-2" />
             </div>
           </div>
           <div className=" h-[99%] w-350 flex flex-col">
-            <div className="b w-[] h-25 flex gap-3 justify-between p-5">
+            <div className="b w-[60vw] h-25 flex gap-3 justify-between p-5">
               <div className="flex gap-2">
                 <select className="border-gray-300 text-gray-600 font-light border w-50 h-10 outline-none">
                   <option value="">Featured</option>
@@ -163,7 +163,7 @@ function Shop() {
           />
 
           <button className="absolute bottom-[-50px] text-[18px] left-1/2 -translate-x-1/2 
-                             bg-black text-white w-[10rem] py-2  rounded-full
+                             bg-black text-white w-[10rem] py-2 rounded-full cursor-pointer
                              opacity-0 transition-all duration-300
                              group-hover:bottom-6 group-hover:opacity-100 
                              hover:bg-[#E65540]">

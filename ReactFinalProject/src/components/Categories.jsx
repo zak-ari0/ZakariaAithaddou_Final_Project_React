@@ -1,7 +1,10 @@
 import React from "react";
-import images from "../constents"; 
+import images from "../constents";
+import { useNavigate } from "react-router-dom";
 
 function Categories() {
+  const navigate = useNavigate();
+
   const categories = [
     { title: "DRESSES", image: images.cards1 },
     { title: "WATCHES", image: images.cards2 },
@@ -17,6 +20,7 @@ function Categories() {
         {categories.map((item, index) => (
           <div
             key={index}
+            onClick={() => navigate("/shop")}
             className={`
               group relative overflow-hidden cursor-pointer
               ${index === 0 || index === 2 || index === 4 ? "h-[60vh]" : ""}
@@ -29,7 +33,10 @@ function Categories() {
             />
             <div className="absolute inset-0 bg-black/3 transition duration-500" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <button className="duration-300 cursor-pointer absolute bottom-5 text-black text-[18px] font-light uppercase tracking-wide py-2 w-45 bg-white opacity-90 hover:bg-[#E65540] hover:opacity-100 hover:text-white">
+              <button
+                onClick={() => navigate("/shop")}
+                className="duration-300 cursor-pointer absolute bottom-5 text-black text-[18px] font-light uppercase tracking-wide py-2 w-45 bg-white opacity-90 hover:bg-[#E65540] hover:opacity-100 hover:text-white"
+              >
                 {item.title}
               </button>
             </div>
