@@ -1,31 +1,37 @@
 import React from "react";
 import images from "../constents";
+import { useParams } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 
 function Blog() {
+  const { id } = useParams(); // get the clicked blog ID
+
   const posts = [
     {
       img: images.blog_1,
       date: "28 DEC, 2017",
-      title: "The White Sneakers Nearly Every Fashion Girls Own",
+      title: "Black Friday Guide: Best Sales & Discount Codes",
       excerpt:
-        "Duis ut velit gravida nibh bibendum commodo. Suspendisse pellentesque mattis augue id euismod.",
+        "Full blog content for Black Friday Guide...",
     },
     {
       img: images.blog_2,
       date: "26 DEC, 2017",
-      title: "Black Friday Guide: Best Sales & Discount Codes",
+      title: "The White Sneakers Nearly Every Fashion Girls Own",
       excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate.",
+        "Full blog content for White Sneakers...",
     },
     {
-      img: images.blog_1,
+      img: images.blog_3,
       date: "22 DEC, 2017",
-      title: "New Collection: Backpack Style 2018",
+      title: "New York SS 2018 Street Style: By Annina Mislin",
       excerpt:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        "Full blog content for New York SS 2018...",
     },
   ];
+
+  // fallback if invalid ID
+  const post = posts[id] || posts[0];
 
   const featured = [
     {
@@ -52,51 +58,51 @@ function Blog() {
 
   return (
     <>
-      <div className="w-full relative md:h-96  overflow-hidden">
+      <div className="w-full relative md:h-96 overflow-hidden">
         <img
           src={images.banner}
           alt="Contact Banner"
           className="w-full h-60 object-cover"
         />
-        <h2 className="absolute  -top-40 inset-0 flex items-center justify-center uppercase text-white text-6xl md:text-6xl font-bold">
+        <h2 className="absolute -top-40 inset-0 flex items-center justify-center uppercase text-white text-6xl md:text-6xl font-bold">
           NEWS
         </h2>
       </div>
-      <section className="container mx-auto  flex gap-12">
+
+      <section className="container mx-auto flex gap-12 mt-12">
+        {/* Left: Main blog post */}
         <div className="w-[70%] flex flex-col gap-16">
-          {posts.map((post, index) => (
-            <div key={index} className=" ml-60 flex flex-col gap-6">
-              <div className="relative overflow-hidden">
-                <img
-                  src={post.img}
-                  alt={post.title}
-                  className="w-[50vw] h-[70vh] object-cover hover:scale-110 duration-300 cursor-pointer"
-                />
-
-                <span className="absolute bottom-4 left-4 bg-black text-white text-xs px-4 py-2">
-                  {post.date}
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl font-medium hover:text-[#E65540] cursor-pointer transition">
-                  {post.title}
-                </h2>
-
-                <p className="text-gray-500 text-sm">
-                  by fashe-theme Admin | crafts, street style | 0 Comments
-                </p>
-
-                <p className="text-gray-500 leading-7">{post.excerpt}</p>
-
-                <button className="text-black font-medium flex items-center gap-2 hover:text-[#E65540] transition">
-                  Continue Reading →
-                </button>
-              </div>
+          <div className="ml-60 flex flex-col gap-6">
+            <div className="relative overflow-hidden">
+              <img
+                src={post.img}
+                alt={post.title}
+                className="w-[50vw] h-[70vh] object-cover hover:scale-110 duration-300 cursor-pointer"
+              />
+              <span className="absolute bottom-4 left-4 bg-black text-white text-xs px-4 py-2">
+                {post.date}
+              </span>
             </div>
-          ))}
+
+            <div className="flex flex-col gap-4">
+              <h2 className="text-3xl font-medium hover:text-[#E65540] cursor-pointer transition">
+                {post.title}
+              </h2>
+
+              <p className="text-gray-500 text-sm">
+                by fashe-theme Admin | crafts, street style | 0 Comments
+              </p>
+
+              <p className="text-gray-500 leading-7">{post.excerpt}</p>
+
+              <button className="text-black font-medium flex items-center gap-2 hover:text-[#E65540] transition">
+                Continue Reading →
+              </button>
+            </div>
+          </div>
         </div>
 
+        {/* Right: Sidebar */}
         <div className="w-[30%] flex flex-col gap-10">
           <div className="relative">
             <input
@@ -113,7 +119,7 @@ function Blog() {
             {featured.map((item, index) => (
               <div
                 key={index}
-                className="flex gap-4 items-center cursor-pointer group "
+                className="flex gap-4 items-center cursor-pointer group"
               >
                 <img
                   src={item.img}

@@ -11,6 +11,8 @@ import Features from "./pages/Features";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Account from "./pages/Account";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/register" element={<Register />} />
 
       </Routes>
 
