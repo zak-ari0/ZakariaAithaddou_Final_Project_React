@@ -3,6 +3,7 @@ import Carousel1 from '../components/carousel1';
 import Categories from '../components/Categories';
 import Carousel2 from '../components/Carousel2';
 import ScaleSection from '../components/scaleSection';
+import OurBlog from '../components/OurBlog';
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
             <Categories />
             <Carousel2 />
             <ScaleSection />
+            <OurBlog />
         </div>
     );
 }
